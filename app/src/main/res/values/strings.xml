@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">test01</string>
+    <string-array name="currancies">
+        <item>chf</item>
+        <item>czk</item>
+        <item>eur</item>
+        <item>gbp</item>
+        <item>usd</item>
+    </string-array>
+</resources>
