@@ -24,7 +24,7 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private TextView result;
-    private RequestQueue mQueue;
+    private RequestQueue http;
     private EditText input;
     private String currancy;
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mQueue= Volley.newRequestQueue(this);
+        http= Volley.newRequestQueue(this);
         input=findViewById(R.id.input);
         result=findViewById(R.id.result);
         Spinner spinner = findViewById(R.id.spinner);
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         e.printStackTrace();
                     }
                 }, Throwable::printStackTrace);
-        mQueue.add(request);
+        http.add(request);
 
     }
 }
